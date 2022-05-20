@@ -1,0 +1,37 @@
+/**Définition des couleurs**/
+$color-primary: #9356DC;
+$color-secondary:#FF79DA; 
+$color-third:#99E2D0;
+$police-dark-background: #cec6cc;
+$dark: black;
+$dark-background:#353535;
+$grey-background:#EAEAEA;
+$grey-light:#F6F6F6;
+
+//** Mixins **/
+@mixin font-color ($dark-background-font-color: true) {
+    @if($dark-background-font-color){
+        background-color: $dark-background;
+        color: $grey-light;
+    }@else{
+        background-color: #fff;
+        color: $dark;
+    }
+}
+
+@mixin ombres {
+    box-shadow: 3px 3px 10px 3px #d6d4d4;
+}
+
+//** Fonctions **/
+
+/*Changement de couleur de texte en fonction du background*/
+
+@function lightness-shift($colour){
+    @if ( lightness($colour) < 25% ) {
+    @return lighten($colour, 10%);
+    }@else{
+    @return darken($colour, 35%);
+    }
+    }
+

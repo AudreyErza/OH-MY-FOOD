@@ -1,0 +1,373 @@
+@charset "UTF-8";
+/**Définition des couleurs**/
+/*Changement de couleur de texte en fonction du background*/
+body {
+  margin: 0px;
+  font-family: 'Roboto Flex';
+  overflow: hidden visible;
+}
+
+h1 {
+  font-family: 'Roboto Flex';
+  font-size: 180%;
+  font-weight: 600;
+  padding: 5px;
+  margin: 10px;
+}
+
+h2 {
+  font-family: 'Roboto Flex';
+  font-size: 130%;
+  font-weight: 200;
+  padding: 10px;
+  margin: 0px;
+}
+
+h3 {
+  font-family: 'Shrikhand';
+  font-size: 110%;
+  padding: 5px;
+  margin: 0px;
+}
+
+h4 {
+  font-family: 'Roboto Flex';
+  font-weight: 500;
+  padding: 5px;
+  margin: 0px;
+  font-size: 115%;
+}
+
+i {
+  font-size: 100%;
+  padding: 5px;
+  margin: 0px;
+  width: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+a:link {
+  text-decoration: none;
+  color: initial;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: 0px;
+  padding: 20px;
+  background-color: #353535;
+  color: #F6F6F6;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px;
+}
+
+header img {
+  width: 60%;
+  margin: 10px;
+}
+
+.bouton {
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: #F6F6F6;
+  width: 220px;
+  height: 60px;
+  border-radius: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 15px;
+  -webkit-box-shadow: 3px 3px 10px 3px #d6d4d4;
+          box-shadow: 3px 3px 10px 3px #d6d4d4;
+}
+
+.bouton2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: inline;
+          flex-direction: inline;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  margin: 20px;
+}
+
+.bouton2_chiffre {
+  background-color: #9356DC;
+  width: 25px;
+  height: 25px;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #F6F6F6;
+  font-size: 100%;
+  font-weight: 400;
+  position: relative;
+  left: 15px;
+}
+
+.bouton2_texte {
+  background-color: #F6F6F6;
+  width: 90%;
+  height: 80px;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #353535;
+  font-size: 120%;
+  font-weight: 400;
+  -webkit-box-shadow: 3px 3px 10px 3px #d6d4d4;
+          box-shadow: 3px 3px 10px 3px #d6d4d4;
+}
+
+.bouton2_texte-violet {
+  background-color: #f2eafb;
+  width: 90%;
+  height: 80px;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 120%;
+  font-weight: 400;
+  -webkit-box-shadow: 3px 3px 10px 3px #d6d4d4;
+          box-shadow: 3px 3px 10px 3px #d6d4d4;
+}
+
+.bouton2_texte-violet i {
+  color: #9356DC;
+}
+
+/** Page accueil */
+.localisation {
+  background-color: #EAEAEA;
+  color: #353535;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 13px;
+  -webkit-box-shadow: 1px 3px 3px 0px rgba(186, 181, 181, 0.784) inset;
+          box-shadow: 1px 3px 3px 0px rgba(186, 181, 181, 0.784) inset;
+  font-family: 'Roboto Flex';
+  font-weight: 500;
+  margin: 0px;
+  font-size: 115%;
+}
+
+.intro {
+  background-color: #F6F6F6;
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.fonctionnement_header {
+  font-size: 100%;
+  font-weight: 600;
+  padding-left: 20px;
+  padding-top: 10px;
+  color: #353535;
+}
+
+.restaurants {
+  background-color: #F6F6F6;
+  width: 100%;
+}
+
+.restaurants_bloc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  margin-top: 40px;
+  padding-bottom: 30px;
+}
+
+.restaurants_header {
+  font-size: 100%;
+  font-weight: 600;
+  padding-left: 20px;
+  padding-top: 10px;
+  color: #353535;
+}
+
+.restaurants_carte {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 20px;
+  background-color: white;
+  width: 85%;
+  -webkit-box-shadow: 3px 3px 10px 3px #d6d4d4;
+          box-shadow: 3px 3px 10px 3px #d6d4d4;
+}
+
+.restaurants_carte img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  height: 170px;
+  z-index: 0;
+}
+
+.restaurants_carte_header {
+  font-size: 130%;
+  font-weight: 600;
+  position: relative;
+  top: -30px;
+  padding-left: 10px;
+  padding-top: 10px;
+  color: #353535;
+}
+
+.restaurants_carte_new {
+  position: relative;
+  top: -160px;
+  right: -220px;
+  background-color: #99E2D0;
+  color: #2c9c81;
+  width: 80px;
+  padding: 5px;
+  text-align: center;
+  font-weight: 600;
+  z-index: 1;
+  border-radius: 2px;
+}
+
+.restaurants_carte_new--inactive {
+  position: relative;
+  top: -160px;
+  right: -220px;
+  background-color: none;
+  color: transparent;
+  width: 80px;
+  padding: 5px;
+  text-align: center;
+  font-weight: 600;
+  z-index: 1;
+  border-radius: 2px;
+}
+
+.restaurants_carte_lieu {
+  color: #353535;
+  padding-left: 10px;
+  position: relative;
+  top: -20px;
+  font-size: 120%;
+  font-weight: 300;
+}
+
+.restaurants_carte_fav {
+  color: black;
+  font-size: 200%;
+  font-weight: 100;
+  position: relative;
+  right: -90px;
+  top: -10px;
+}
+
+.restaurants_carte_bas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.restaurants_carte_haut {
+  display: flyex;
+}
+/*# sourceMappingURL=main.css.map */

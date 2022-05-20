@@ -1,0 +1,51 @@
+body{ 
+    margin: 0px;
+    font-family: 'Roboto Flex';
+    overflow: hidden visible;
+
+}
+h1
+{
+    font-family: 'Roboto Flex';
+    font-size: 180%;
+    font-weight: 600;
+    padding: 5px;
+    margin: 10px;
+}
+h2
+{
+    font-family: 'Roboto Flex';
+    font-size: 130%;
+    font-weight: 200;
+    padding: 10px;
+    margin: 0px;
+}
+h3
+{
+    font-family: 'Shrikhand';
+    font-size: 110%;
+    padding: 5px;
+    margin: 0px;
+}
+h4{
+    font-family: 'Roboto Flex';
+    font-weight: 500;
+    padding: 5px;
+    margin: 0px;
+    font-size: 115%;
+}
+
+i
+{
+    font-size: 100%;
+    padding: 5px;
+    margin: 0px;
+    width: 10%;
+    display: flex;
+    justify-content: center;
+}
+a:link 
+{ 
+ text-decoration:none; 
+ color: initial;
+} 
