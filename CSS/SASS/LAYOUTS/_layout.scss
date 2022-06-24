@@ -17,6 +17,11 @@ header
             margin: 10px;
         }
 }
+button
+{
+    border: none;
+    font: inherit;
+}
 .bouton
 {
     background:linear-gradient($color-secondary,$color-primary);
@@ -85,6 +90,27 @@ header
                     }
             }
         }
+}
+/** Version Desktop */
+@media (min-width: 1400px){
+    .bouton2{
+        width: 400px;
+    }
+    .bouton2_chiffre{
+        width: 40px;
+        height:40px;
+    }
+    header img{
+            width: 30%;
+        }
+    footer
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 }
 
 

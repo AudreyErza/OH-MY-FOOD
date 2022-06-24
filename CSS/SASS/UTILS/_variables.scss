@@ -9,18 +9,35 @@ $grey-background:#EAEAEA;
 $grey-light:#F6F6F6;
 
 //** Mixins **/
+//** Adapter la couleur de la police selon le fond **/
 @mixin font-color ($dark-background-font-color: true) {
     @if($dark-background-font-color){
         background-color: $dark-background;
-        color: $grey-light;
+        color: $grey-background;
     }@else{
         background-color: #fff;
         color: $dark;
     }
 }
 
+//** Paramétrage ombre cartes et boutons **/
 @mixin ombres {
     box-shadow: 3px 3px 10px 3px #d6d4d4;
+}
+//** Alignement des éléments **/
+@mixin ajustement-column ($ajust) {
+    display: flex;
+    flex: column;
+    align-items: $ajust;
+    justify-content: $ajust;
+    
+}
+@mixin ajustement-lign ($ajust) {
+    display: flex;
+    flex-direction: row;
+    align-items: $ajust;
+    justify-content: $ajust;
+    
 }
 
 //** Fonctions **/
