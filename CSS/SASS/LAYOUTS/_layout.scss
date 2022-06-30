@@ -73,7 +73,7 @@ button
             font-size: 120%;
             font-weight: 400;
             @include ombres;
-                &-violet{
+                &:hover{
                 background-color: lighten($color-primary,35%);
                 width: 90%;
                 height: 80px;

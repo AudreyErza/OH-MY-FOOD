@@ -401,7 +401,7 @@ button {
           box-shadow: 3px 3px 10px 3px #d6d4d4;
 }
 
-.bouton2_texte-violet {
+.bouton2_texte:hover {
   background-color: #dccded;
   width: 90%;
   height: 80px;
@@ -422,7 +422,7 @@ button {
           box-shadow: 3px 3px 10px 3px #d6d4d4;
 }
 
-.bouton2_texte-violet i {
+.bouton2_texte:hover i {
   color: #7e49bf;
 }
 
