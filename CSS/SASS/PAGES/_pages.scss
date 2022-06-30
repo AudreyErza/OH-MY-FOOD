@@ -67,6 +67,7 @@
     border-radius: 20px;
     background-color: white;
     width: 85%;
+    z-index: 0;
     @include ombres;
         img {
             width: 100%;
@@ -127,11 +128,12 @@
         &_fav
         {
             color: black;
-            font-size: 100%;
+            font-size: 200%;
             font-weight: 100;
             position: relative;
-            right: -90px;
+            right: -70px;
             top: -10px;
+            z-index: 1;
         }
         &_bas
         {
@@ -145,7 +147,6 @@
 
 /** Page accueil FIN------------------------------------------ */
 /** Page MENU ------------------------------------------ */
-
 /*photo*/
 .photo
 {
@@ -177,7 +178,7 @@
                     padding: 20px;
                 }
                 &_fav{
-                    font-size: 160%;
+                    font-size: 200%;
                     padding: 20px;
                 }
                 &2{
@@ -195,6 +196,7 @@
             flex-wrap: wrap;
             gap:15px;
             padding-bottom: 20px;
+            animation: menu 4s ease-in-out 0.4s 1 normal both;
                 &_card{
                     @include ombres;
                     @include ajustement-lign (space-between);
@@ -238,6 +240,9 @@
                             color: $dark-background;
                         }
                 }
+                &1{
+                    animation: menu 3s ease-in-out 0.4s 1 normal both;
+                }
         }
 }
 .border
@@ -259,8 +264,7 @@
     }
 .loader{
     position: absolute;
-    border: 1px solid $color-primary;
-    width: 400px;
+    width: 370px;
     height: 400px;
     background-color: $dark-background;
     font-family: "Shrikhand";
