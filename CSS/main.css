@@ -1,5 +1,152 @@
 @charset "UTF-8";
 /**Définition des couleurs**/
+/** Les dégradés */
+/** Animations */
+@-webkit-keyframes color {
+  0% {
+    color: linear-gradient(#d15cb0, #7e49bf);
+  }
+  25% {
+    color: #9b2c7c;
+  }
+  50% {
+    color: #c3379c;
+  }
+  100% {
+    color: #d15cb0;
+  }
+}
+@keyframes color {
+  0% {
+    color: linear-gradient(#d15cb0, #7e49bf);
+  }
+  25% {
+    color: #9b2c7c;
+  }
+  50% {
+    color: #c3379c;
+  }
+  100% {
+    color: #d15cb0;
+  }
+}
+
+@-webkit-keyframes color1 {
+  0% {
+    color: #73215c;
+  }
+  25% {
+    color: #9b2c7c;
+  }
+  50% {
+    color: #c3379c;
+  }
+  100% {
+    color: #d15cb0;
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+  }
+}
+
+@keyframes color1 {
+  0% {
+    color: #73215c;
+  }
+  25% {
+    color: #9b2c7c;
+  }
+  50% {
+    color: #c3379c;
+  }
+  100% {
+    color: #d15cb0;
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+  }
+}
+
+@-webkit-keyframes color2 {
+  0% {
+    color: #10392f;
+  }
+  25% {
+    color: #1b6150;
+  }
+  50% {
+    color: #4acbab;
+  }
+  100% {
+    color: #99E2D0;
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+}
+
+@keyframes color2 {
+  0% {
+    color: #10392f;
+  }
+  25% {
+    color: #1b6150;
+  }
+  50% {
+    color: #4acbab;
+  }
+  100% {
+    color: #99E2D0;
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+}
+
+@-webkit-keyframes color3 {
+  0% {
+    color: #351d52;
+  }
+  25% {
+    color: #4d2a78;
+  }
+  50% {
+    color: #65379e;
+  }
+  100% {
+    color: #7e49bf;
+    -webkit-transform: rotate(-30deg);
+            transform: rotate(-30deg);
+  }
+}
+
+@keyframes color3 {
+  0% {
+    color: #351d52;
+  }
+  25% {
+    color: #4d2a78;
+  }
+  50% {
+    color: #65379e;
+  }
+  100% {
+    color: #7e49bf;
+    -webkit-transform: rotate(-30deg);
+            transform: rotate(-30deg);
+  }
+}
+
+@-webkit-keyframes loader {
+  100% {
+    -webkit-transform: translateY(500px);
+            transform: translateY(500px);
+  }
+}
+
+@keyframes loader {
+  100% {
+    -webkit-transform: translateY(500px);
+            transform: translateY(500px);
+  }
+}
+
 /*Changement de couleur de texte en fonction du background*/
 body {
   margin: 0px;
@@ -56,6 +203,23 @@ a:link {
   color: initial;
 }
 
+/* -----SVG Icons----- */
+.svg-icon {
+  width: 1.2em;
+  height: 1,2em;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: #353535;
+}
+
+.svg-icon circle {
+  stroke: #353535;
+  stroke-width: 1;
+}
+
 footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -94,8 +258,8 @@ button {
 }
 
 .bouton {
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
-  background: linear-gradient(#FF79DA, #9356DC);
+  background: -webkit-gradient(linear, left top, left bottom, from(#d15cb0), to(#7e49bf));
+  background: linear-gradient(#d15cb0, #7e49bf);
   color: #F6F6F6;
   width: 220px;
   height: 60px;
@@ -133,7 +297,7 @@ button {
 }
 
 .bouton2_chiffre {
-  background-color: #9356DC;
+  background-color: #7e49bf;
   width: 25px;
   height: 25px;
   border-radius: 20px;
@@ -177,7 +341,7 @@ button {
 }
 
 .bouton2_texte-violet {
-  background-color: #f2eafb;
+  background-color: #dccded;
   width: 90%;
   height: 80px;
   border-radius: 20px;
@@ -198,7 +362,14 @@ button {
 }
 
 .bouton2_texte-violet i {
-  color: #9356DC;
+  color: #7e49bf;
+}
+
+.bouton:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-box-shadow: 3px 3px 10px 3px #a4a4a4;
+          box-shadow: 3px 3px 10px 3px #a4a4a4;
 }
 
 /** Version Desktop */
@@ -388,7 +559,7 @@ button {
 
 .restaurants_carte_fav {
   color: black;
-  font-size: 200%;
+  font-size: 100%;
   font-weight: 100;
   position: relative;
   right: -90px;
@@ -586,6 +757,68 @@ button {
   margin-bottom: 20px;
 }
 
+/** LOADER */
+.pageloader {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  background-color: #353535;
+}
+
+.loader {
+  position: absolute;
+  border: 1px solid #7e49bf;
+  width: 400px;
+  height: 400px;
+  background-color: #353535;
+  font-family: "Shrikhand";
+  font-size: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #353535;
+  -webkit-animation: loader 3s ease-in 0.4s infinite alternate;
+          animation: loader 3s ease-in 0.4s infinite alternate;
+}
+
+.loader_1 {
+  -webkit-animation-delay: 100ms;
+          animation-delay: 100ms;
+  -webkit-animation: color1 3s ease-in 0.4s infinite alternate;
+          animation: color1 3s ease-in 0.4s infinite alternate;
+}
+
+.loader_2 {
+  -webkit-animation-delay: 100ms;
+          animation-delay: 100ms;
+  -webkit-animation: color2 3s ease-in 0.4s infinite alternate;
+          animation: color2 3s ease-in 0.4s infinite alternate;
+}
+
+.loader_3 {
+  -webkit-animation-delay: 100ms;
+          animation-delay: 100ms;
+  -webkit-animation: color3 3s ease-in 0.4s infinite alternate;
+          animation: color3 3s ease-in 0.4s infinite alternate;
+}
+
 /** Version desktop - Accueil */
 @media (min-width: 1400px) {
   .fonctionnement_bloc {
@@ -742,7 +975,7 @@ button {
     padding-top: 10px;
   }
   .menu_bloc_card_text2 {
-    width: 200px;
+    width: 100px;
     font-size: 15px;
     font-weight: 300;
     color: #353535;

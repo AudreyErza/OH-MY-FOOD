@@ -127,7 +127,7 @@
         &_fav
         {
             color: black;
-            font-size: 200%;
+            font-size: 100%;
             font-weight: 100;
             position: relative;
             right: -90px;
@@ -249,8 +249,46 @@
     margin-left: 20px;
     margin-bottom: 20px;
 }
+/** LOADER */
+.pageloader{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: $dark-background;
+    }
+.loader{
+    position: absolute;
+    border: 1px solid $color-primary;
+    width: 400px;
+    height: 400px;
+    background-color: $dark-background;
+    font-family: "Shrikhand";
+    font-size: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: $dark-background;
+    animation: loader 3s ease-in 0.4s infinite alternate;
+        &_1{
+        animation-delay: 100ms;
+        animation: color1 3s ease-in 0.4s infinite alternate;
+    }
+        &_2{
+        animation-delay: 100ms;
+        animation: color2 3s ease-in 0.4s infinite alternate;
+    }
+        &_3{
+        animation-delay: 100ms;
+        animation: color3 3s ease-in 0.4s infinite alternate;
+       
+    }
+}
 
-/** Version desktop - Accueil */
+
+    
+    /** Version desktop - Accueil */
 @media (min-width: 1400px) {
     .fonctionnement_bloc {
         @include ajustement-lign(center);
@@ -319,7 +357,7 @@
                                 padding-top: 10px;
                             }
                             &2{
-                                width: 200px;
+                                width: 100px;
                                 font-size: 15px;
                                 font-weight: 300;
                                 color:$dark-background;
@@ -343,3 +381,4 @@
                 }
 }
 }
+

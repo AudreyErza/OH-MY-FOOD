@@ -24,7 +24,7 @@ button
 }
 .bouton
 {
-    background:linear-gradient($color-secondary,$color-primary);
+    background:$gradient-purple;
     color: $grey-light;
     width: 220px;
     height: 60px;
@@ -89,6 +89,11 @@ button
                         color: $color-primary;
                     }
             }
+        }
+        &:hover
+        {
+            background: $light-gradient-purple;
+            @include ombres-dark;
         }
 }
 /** Version Desktop */

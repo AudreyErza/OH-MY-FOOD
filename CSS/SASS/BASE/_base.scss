@@ -48,3 +48,20 @@ a:link
  text-decoration:none; 
  color: initial;
 } 
+/* -----SVG Icons----- */
+
+.svg-icon {
+    width: 1.2em;
+    height: 1,2em;
+  }
+  
+  .svg-icon path,
+  .svg-icon polygon,
+  .svg-icon rect {
+    fill: $dark-background;
+  }
+  
+  .svg-icon circle {
+    stroke: $dark-background;
+    stroke-width: 1;
+  }

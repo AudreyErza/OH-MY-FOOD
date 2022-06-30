@@ -1,12 +1,22 @@
 /**Définition des couleurs**/
-$color-primary: #9356DC;
-$color-secondary:#FF79DA; 
+$light-color-primary: #9356DC;
+$color-primary: #7e49bf;
+$light-color-secondary:#FF79DA;
+$color-secondary:#d15cb0;
 $color-third:#99E2D0;
 $police-dark-background: #cec6cc;
 $dark: black;
 $dark-background:#353535;
 $grey-background:#EAEAEA;
 $grey-light:#F6F6F6;
+
+/** Les dégradés */
+$gradient-purple: linear-gradient($color-secondary,$color-primary);
+$light-gradient-purple: linear-gradient($light-color-secondary,$light-color-primary);
+$gradient1:linear-gradient(to top, #353535, #423d58, #52437b, #65489e, #7e49bf);
+$gradient2:linear-gradient(to top, #353535, #353535, #52437b, #65489e, #7e49bf);
+$gradient3:linear-gradient(to top, #353535, #353535, #353535, #65489e, #7e49bf);
+$gradient4:linear-gradient(to top, #353535, #353535, #353535, #353535, #7e49bf);
 
 //** Mixins **/
 //** Adapter la couleur de la police selon le fond **/
@@ -24,6 +34,9 @@ $grey-light:#F6F6F6;
 @mixin ombres {
     box-shadow: 3px 3px 10px 3px #d6d4d4;
 }
+@mixin ombres-dark {
+    box-shadow: 3px 3px 10px 3px #a4a4a4;
+}
 //** Alignement des éléments **/
 @mixin ajustement-column ($ajust) {
     display: flex;
@@ -37,6 +50,79 @@ $grey-light:#F6F6F6;
     flex-direction: row;
     align-items: $ajust;
     justify-content: $ajust;
+    
+}
+
+/** Animations */
+@keyframes color {
+    0%{
+        color:$gradient-purple
+    }
+    25%{
+        color:darken($color: $color-secondary, $amount: 20);
+    }
+    50%{
+        color:darken($color: $color-secondary, $amount: 10);
+    }
+    100%{
+        color:$color-secondary;
+    
+    }
+    
+}
+@keyframes color1 {
+    0%{
+        color:darken($color: $color-secondary, $amount: 30);
+    }
+    25%{
+        color:darken($color: $color-secondary, $amount: 20);
+    }
+    50%{
+        color:darken($color: $color-secondary, $amount: 10);
+    }
+    100%{
+        color:$color-secondary;
+        transform: rotate(-20deg);
+    }
+    
+}
+
+@keyframes color2 {
+    0%{
+        color:darken($color: $color-third, $amount: 60);
+    }
+    25%{
+        color:darken($color: $color-third, $amount: 50);
+    }
+    50%{
+        color:darken($color: $color-third, $amount: 20);
+    }
+    100%{
+        color:$color-third;
+        transform: rotate(15deg);
+    }
+    
+}
+@keyframes color3 {
+    0%{
+        color:darken($color: $color-primary, $amount: 30);
+    }
+    25%{
+        color:darken($color: $color-primary, $amount: 20);
+    }
+    50%{
+        color:darken($color: $color-primary, $amount: 10);
+    }
+    100%{
+        color:$color-primary;
+        transform: rotate(-30deg);
+    }
+    
+}
+@keyframes loader {
+    100%{
+        transform: translateY(500px);
+    }
     
 }
 
