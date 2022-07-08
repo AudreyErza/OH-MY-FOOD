@@ -86,9 +86,8 @@
         }
         &_new
         {
-            position:relative;
-            top: -160px;
-            right: -220px;
+            position:absolute;
+            right: 100px;
             background-color: $color-third;
             color: lightness-shift($color-third);
             width: 80px;
@@ -170,8 +169,10 @@
                     padding: 20px;
                 }
                 &_fav{
-                    font-size: 200%;
-                    padding: 20px;
+                    padding-top: 20px;
+                    display: flex;
+                    justify-content: center;
+                    padding-left: 20px;
                 }
                 &2{
                     text-transform : uppercase;
@@ -183,15 +184,34 @@
                 }
         }
         &_bloc{
-            width: 100%;
-            @include ajustement-column(center);
-            flex-wrap: wrap;
-            gap:15px;
-            padding-bottom: 20px;
-            animation: menu 4s ease-in-out 0.4s 1 normal both;
+                &1{
+                    animation: menu 2s ease-in-out 1s 1 normal both;
+                    width: 100%;
+                @include ajustement-column(center);
+                flex-wrap: wrap;
+                gap:15px;
+                padding-bottom: 20px;
+                }
+                &2{
+                    animation: menu 2s ease-in-out 2s 1 normal both;
+                    width: 100%;
+                @include ajustement-column(center);
+                flex-wrap: wrap;
+                gap:15px;
+                padding-bottom: 20px;
+                }
+                &3{
+                    animation: menu 2s ease-in-out 3s 1 normal both;
+                    width: 100%;
+                @include ajustement-column(center);
+                flex-wrap: wrap;
+                gap:15px;
+                padding-bottom: 20px;
+                }
+
                 &_card{
                     @include ombres;
-                    @include ajustement-lign (space-between);
+                    @include ajustement-lign (stretch);
                     background-color: $grey-light;
                     border-radius: 20px;
                     width: 95%;
@@ -201,6 +221,7 @@
                             display: flex;
                             flex-direction: column;
                             gap: 5px;
+                            width: 100%;
                             &1{
                                 font-size: 20px;
                                 font-weight: 600;
@@ -210,7 +231,6 @@
                                 padding-top: 10px;
                             }
                             &2{
-                                width: 260px;
                                 font-size: 15px;
                                 font-weight: 300;
                                 color:$dark-background;
@@ -222,18 +242,12 @@
                             }
                         }
                         &_price{
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: flex-end;
-                            padding-right: 15px;
-                            padding-top: 15px;
-                            padding-bottom: 15px;
+                            padding: 0px 15px 0px 15px;
                             font-weight: 500;
                             color: $dark-background;
+                            @include ajustement-lign (center);
+
                         }
-                }
-                &1{
-                    animation: menu 3s ease-in-out 0.4s 1 normal both;
                 }
         }
 }
@@ -323,8 +337,12 @@
                     font-size: 160%;
                     padding: 40px;}
                 &_fav{
-                    font-size: 220%;
-                    padding: 40px;}
+                    padding: 40px;
+                    display: flex;
+                    justify-content: center;
+                    position: relative;
+                    top: -5px;
+                }
                 }
         &_bloc{
             width: 100%;
@@ -334,16 +352,16 @@
             padding-bottom: 20px;
                 &_card{
                     @include ombres;
-                    @include ajustement-lign (space-between);
+                    @include ajustement-lign (stretch);
                     background-color: $grey-light;
                     border-radius: 20px;
-                    width: 30%;
                     height: 70px;
                     margin: 0px;
                         &_text{
                             display: flex;
                             flex-direction: column;
                             gap: 5px;
+                            width: 100%;
                             &1{
                                 font-size: 20px;
                                 font-weight: 600;
@@ -353,7 +371,6 @@
                                 padding-top: 10px;
                             }
                             &2{
-                                width: 100px;
                                 font-size: 15px;
                                 font-weight: 300;
                                 color:$dark-background;
@@ -365,16 +382,13 @@
                             }
                         }
                         &_price{
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: flex-end;
-                            padding-right: 15px;
-                            padding-top: 15px;
-                            padding-bottom: 15px;
+                            padding: 0px 15px 0px 15px;
                             font-weight: 500;
-                            color: $dark-background;}
+                            color: $dark-background;
+                            @include ajustement-lign (center);
                     }
                 }
 }
 }
 
+}

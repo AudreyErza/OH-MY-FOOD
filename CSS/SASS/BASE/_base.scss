@@ -48,7 +48,21 @@ a:link
  text-decoration:none; 
  color: inherit;
 } 
-
+#city-select{
+    background-color: $grey-background;
+    color: $dark-background;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 13px;
+    font-family: 'Roboto Flex';
+    font-weight: 500;
+    margin: 0px;
+    font-size: 115%;
+    border: none;
+    appearance: none;
+}
 /* -----SVG Icons----- */
 
 .svg-icon {

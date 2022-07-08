@@ -121,18 +121,36 @@
 /**Animations des coeurs */
 @-webkit-keyframes coeur {
   0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 25;
+  }
+  50% {
+    opacity: 50;
+  }
+  75% {
+    opacity: 75;
   }
   100% {
-    background: -webkit-gradient(linear, left top, left bottom, from(#d15cb0), to(#7e49bf));
-    background: linear-gradient(#d15cb0, #7e49bf);
+    opacity: 100;
   }
 }
 @keyframes coeur {
   0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 25;
+  }
+  50% {
+    opacity: 50;
+  }
+  75% {
+    opacity: 75;
   }
   100% {
-    background: -webkit-gradient(linear, left top, left bottom, from(#d15cb0), to(#7e49bf));
-    background: linear-gradient(#d15cb0, #7e49bf);
+    opacity: 100;
   }
 }
 
@@ -264,6 +282,31 @@ a:link {
   color: inherit;
 }
 
+#city-select {
+  background-color: #EAEAEA;
+  color: #353535;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 13px;
+  font-family: 'Roboto Flex';
+  font-weight: 500;
+  margin: 0px;
+  font-size: 115%;
+  border: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
 /* -----SVG Icons----- */
 .svg-icon {
   width: 1.2em;
@@ -305,12 +348,21 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header img {
   width: 60%;
   margin: 10px;
+}
+
+.retour {
+  font-size: 250%;
+  width: 80px;
+  margin-left: 10%;
+  color: #353535;
 }
 
 button {
@@ -434,8 +486,35 @@ button {
 }
 
 /** Remplissage des coeurs */
+.empty {
+  font-size: 30px;
+  color: #353535;
+}
+
+.full {
+  font-size: 32px;
+  background: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  left: -41px;
+  top: -1px;
+}
+
+.full:hover {
+  font-size: 32px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#d15cb0), to(#7e49bf));
+  background: linear-gradient(#d15cb0, #7e49bf);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: coeur 2.5s ease-in 1;
+          animation: coeur 2.5s ease-in 1;
+}
+
 /** Version Desktop */
-@media (min-width: 1400px) {
+@media (min-width: 1100px) {
   .bouton2 {
     width: 400px;
   }
@@ -460,6 +539,32 @@ button {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  /** Remplissage des coeurs (version desktop) */
+  .empty {
+    font-size: 34px;
+    color: #353535;
+  }
+  .full {
+    font-size: 35px;
+    background: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    left: -41px;
+  }
+  .full:hover {
+    font-size: 35px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#d15cb0), to(#7e49bf));
+    background: linear-gradient(#d15cb0, #7e49bf);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    left: -40px;
+    -webkit-animation: coeur 1s ease-in 1;
+            animation: coeur 1s ease-in 1;
   }
 }
 
@@ -584,9 +689,8 @@ button {
 }
 
 .restaurants_carte_new {
-  position: relative;
-  top: -160px;
-  right: -220px;
+  position: absolute;
+  right: 100px;
   background-color: #99E2D0;
   color: #2c9c81;
   width: 80px;
@@ -706,8 +810,14 @@ button {
 }
 
 .menu_header_fav {
-  font-size: 200%;
-  padding: 20px;
+  padding-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 20px;
 }
 
 .menu_header2 {
@@ -719,7 +829,9 @@ button {
   padding-left: 20px;
 }
 
-.menu_bloc {
+.menu_bloc1 {
+  -webkit-animation: menu 3s ease-in-out 1s 1 normal both;
+          animation: menu 3s ease-in-out 1s 1 normal both;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -737,8 +849,50 @@ button {
       flex-wrap: wrap;
   gap: 15px;
   padding-bottom: 20px;
-  -webkit-animation: menu 4s ease-in-out 0.4s 1 normal both;
-          animation: menu 4s ease-in-out 0.4s 1 normal both;
+}
+
+.menu_bloc2 {
+  -webkit-animation: menu 3s ease-in-out 1.5s 1 normal both;
+          animation: menu 3s ease-in-out 1.5s 1 normal both;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: column;
+      -ms-flex: column;
+          flex: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 15px;
+  padding-bottom: 20px;
+}
+
+.menu_bloc3 {
+  -webkit-animation: menu 3s ease-in-out 2s 1 normal both;
+          animation: menu 3s ease-in-out 2s 1 normal both;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: column;
+      -ms-flex: column;
+          flex: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 15px;
+  padding-bottom: 20px;
 }
 
 .menu_bloc_card {
@@ -981,8 +1135,15 @@ button {
     padding: 40px;
   }
   .menu_header_fav {
-    font-size: 220%;
     padding: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: relative;
+    top: -5px;
   }
   .menu_bloc {
     width: 100%;
