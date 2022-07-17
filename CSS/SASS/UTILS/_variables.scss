@@ -4,9 +4,9 @@ $color-primary: #7e49bf;
 $light-color-secondary:#FF79DA;
 $color-secondary:#d15cb0;
 $color-third:#99E2D0;
-$police-dark-background: #cec6cc;
+
 $dark: black;
-$dark-background:#353535;
+$dark-grey:#353535;
 $grey-background:#EAEAEA;
 $grey-light:#F6F6F6;
 
@@ -17,12 +17,13 @@ $gradient1:linear-gradient(to top, #353535, #423d58, #52437b, #65489e, #7e49bf);
 $gradient2:linear-gradient(to top, #353535, #353535, #52437b, #65489e, #7e49bf);
 $gradient3:linear-gradient(to top, #353535, #353535, #353535, #65489e, #7e49bf);
 $gradient4:linear-gradient(to top, #353535, #353535, #353535, #353535, #7e49bf);
+$transparent-gradient-purple: linear-gradient(#d15cb0e1,#7e49bfe1);
 
 //** Mixins **/
 //** Adapter la couleur de la police selon le fond **/
-@mixin font-color ($dark-background-font-color: true) {
-    @if($dark-background-font-color){
-        background-color: $dark-background;
+@mixin font-color ($dark-grey-font-color: true) {
+    @if($dark-grey-font-color){
+        background-color: $dark-grey;
         color: $grey-background;
     }@else{
         background-color: #fff;
@@ -40,7 +41,7 @@ $gradient4:linear-gradient(to top, #353535, #353535, #353535, #353535, #7e49bf);
 //** Alignement des éléments **/
 @mixin ajustement-column ($ajust) {
     display: flex;
-    flex: column;
+    flex-direction: column;
     align-items: $ajust;
     justify-content: $ajust;
     
@@ -50,6 +51,7 @@ $gradient4:linear-gradient(to top, #353535, #353535, #353535, #353535, #7e49bf);
     flex-direction: row;
     align-items: $ajust;
     justify-content: $ajust;
+
     
 }
 
@@ -67,7 +69,6 @@ $gradient4:linear-gradient(to top, #353535, #353535, #353535, #353535, #7e49bf);
     }
     100%{
         color:$color-secondary;
-        transform: rotate(-20deg);
     }
     
 }
@@ -84,7 +85,6 @@ $gradient4:linear-gradient(to top, #353535, #353535, #353535, #353535, #7e49bf);
     }
     100%{
         color:$color-third;
-        transform: rotate(15deg);
     }
     
 }
@@ -100,15 +100,29 @@ $gradient4:linear-gradient(to top, #353535, #353535, #353535, #353535, #7e49bf);
     }
     100%{
         color:$color-primary;
-        transform: rotate(-30deg);
     }
     
 }
 @keyframes loader {
-    100%{
-        transform: translateY(300px);
+    0%{
+        opacity: 100%;
     }
-    
+    100%{
+        transform: rotate(360deg) scale(2);
+    }
+}
+@keyframes pageloader
+{
+    0%{
+        opacity: 100%;
+    }
+    75%{
+        opacity: 75%;
+    }
+    100%{
+        opacity:0;
+        z-index: -1;
+    }
 }
 /**Animations des coeurs */
 @keyframes coeur {
@@ -153,15 +167,26 @@ $gradient4:linear-gradient(to top, #353535, #353535, #353535, #353535, #7e49bf);
 @keyframes select{
 
     0%{
-        opacity: 0;
-        position: relative;
-        right: -100px;
+        opacity: 1;
+        transform: scaleX(0);
+        transform-origin: 100% 100%;
     }
     100%{
         opacity:100;
-        position: relative;
-        transform: translatex(-100px);
-        right: -100px;
+        transform: scaleX(1);
+        transform-origin: 100% 100%;
+    }
+}
+@keyframes rotate{
+
+    0%{
+        opacity: 0;
+
+    }
+    100%{
+        opacity:100;
+        transform: rotate(360deg);
+
     }
 }
 //** Fonctions **/

@@ -5,24 +5,29 @@ footer
     justify-content: flex-start;
     margin: 0px;
     padding: 20px;
-        @include font-color ($dark-background-font-color: true)
+        @include font-color ($dark-grey-font-color: true)
 }
 header
 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include ajustement-lign(center);
+    padding: 10px;
         img{
-            width:60%;
+            height: 5vh;
             margin: 10px;
+            padding-top: 2px;
         }
+        background-color: $grey-light;
 }
 .retour{
-    font-size: 250%;
+    font-size: 200%;
     width: 80px;
     margin-left: 10%;
-    color: $dark-background;
+    color: $dark-grey;
+    position:absolute;
+    left: 1vw;
+
 }
+
 button
 {
     border: none;
@@ -75,7 +80,7 @@ button
             text-align: center;
             justify-content: center;
             align-items: center;
-            color: $dark-background;
+            color: $dark-grey;
             font-size: 120%;
             font-weight: 400;
             @include ombres;
@@ -105,7 +110,9 @@ button
 /** Remplissage des coeurs */
 .empty{
     font-size:30px;
-    color: $dark-background
+    color: $dark-grey;
+    position:absolute;
+    z-index: 0;
 }
 .full{
     font-size:32px;
@@ -113,11 +120,33 @@ button
     background-clip:text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    position: relative;
-    left: -41px;
-    top: -1px;
+    position:absolute;
+    z-index: 1;
     &:hover{
     font-size:32px;
+    background:$gradient-purple;
+    background-clip:text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: coeur 1s ease-in 1;
+    }
+}
+.empty2{
+    font-size:34px;
+    color: $dark-grey;
+    position:absolute;
+    top: 2vh;
+}
+.full2{
+    font-size:35px;
+    background:transparent;
+    background-clip:text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position:absolute;
+    top: 2vh;
+    &:hover{
+    font-size:35px;
     background:$gradient-purple;
     background-clip:text;
     -webkit-background-clip: text;
@@ -127,7 +156,7 @@ button
 }
 
 /** Version Desktop */
-@media (min-width: 1100px){
+@media (min-width: 1400px){
     .bouton2{
         width: 400px;
     }
@@ -135,20 +164,29 @@ button
         width: 40px;
         height:40px;
     }
-    header img{
-            width: 30%;
+    header
+    {
+    @include ajustement-lign(center);
+    padding: 10px;
+        img{
+            width:15vw;
+            margin: 0px;
+            padding-top: 2px;
         }
-    footer
+        background-color: $grey-light;
+    }
+    footer /**desktop**/
 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-/** Remplissage des coeurs (version desktop) */
+/** Remplissage des coeurs desktop */
 .empty{
     font-size:34px;
-    color: $dark-background
+    color: $dark-grey;
+    position:absolute;
 }
 .full{
     font-size:35px;
@@ -156,19 +194,38 @@ button
     background-clip:text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    position: relative;
-    left: -41px;
+    position:absolute;
     &:hover{
     font-size:35px;
     background:$gradient-purple;
     background-clip:text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    position: relative;
-    left: -40px;
+    animation: coeur 1s ease-in 1;
+    }
+}
+/** Remplissage des coeurs desktop - pages menus */
+.empty2{
+    font-size:34px;
+    color: $dark-grey;
+    position:absolute;
+    top: -3vh;
+}
+.full2{
+    font-size:35px;
+    background:transparent;
+    background-clip:text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position:absolute;
+    top: -3vh;
+    &:hover{
+    font-size:35px;
+    background:$gradient-purple;
+    background-clip:text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     animation: coeur 1s ease-in 1;
     }
 }
 }
-
-
