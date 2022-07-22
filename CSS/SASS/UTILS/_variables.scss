@@ -31,7 +31,7 @@ $transparent-gradient-purple: linear-gradient(#d15cb0e1,#7e49bfe1);
     }
 }
 
-//** Paramétrage ombre cartes et boutons **/
+//** Paramétrage ombres cartes et boutons **/
 @mixin ombres {
     box-shadow: 3px 3px 10px 3px #d6d4d4;
 }
@@ -49,7 +49,7 @@ $transparent-gradient-purple: linear-gradient(#d15cb0e1,#7e49bfe1);
 @mixin ajustement-lign ($ajust) {
     display: flex;
     flex-direction: row;
-    align-items: $ajust;
+    align-items: center;
     justify-content: $ajust;
 
     

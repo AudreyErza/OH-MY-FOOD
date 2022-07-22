@@ -12,8 +12,8 @@ header
     @include ajustement-lign(center);
     padding: 10px;
         img{
-            height: 5vh;
-            margin: 10px;
+            height: 4vh;
+            margin: 5px;
             padding-top: 2px;
         }
         background-color: $grey-light;
@@ -48,7 +48,6 @@ button
         &2
         {
             display: flex;
-            flex-direction: inline;
             justify-content: center;
             align-items: center;
             text-align: center;

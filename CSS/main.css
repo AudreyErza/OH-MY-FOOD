@@ -358,8 +358,8 @@ header {
   background-color: #F6F6F6;
 }
 header img {
-  height: 5vh;
-  margin: 10px;
+  height: 4vh;
+  margin: 5px;
   padding-top: 2px;
 }
 
@@ -391,7 +391,6 @@ button {
 }
 .bouton2 {
   display: flex;
-  flex-direction: inline;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -702,11 +701,7 @@ button {
 .restaurants_carte_bas {
   display: flex;
   flex-direction: row;
-  align-items: space-between;
   justify-content: space-between;
-}
-.restaurants_carte_haut {
-  display: flyex;
 }
 
 /** Page accueil FIN------------------------------------------ */
@@ -717,9 +712,11 @@ button {
 }
 .photo img {
   width: 100%;
-  height: 50vh;
+  height: 30vh;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: 0px -45px;
+     object-position: 0px -45px;
 }
 
 .commande {
@@ -742,10 +739,12 @@ button {
 }
 .menu_header {
   width: 80%;
+  padding-left: 2vw;
   display: flex;
   flex-direction: row;
-  align-items: space-between;
+  align-items: center;
   justify-content: space-between;
+  align-items: stretch;
 }
 .menu_header_text {
   font-family: "Shrikhand";
@@ -800,8 +799,9 @@ button {
   box-shadow: 3px 3px 10px 3px #d6d4d4;
   display: flex;
   flex-direction: row;
-  align-items: space-between;
+  align-items: center;
   justify-content: space-between;
+  align-items: stretch;
   background-color: #F6F6F6;
   border-radius: 20px;
   width: 95%;
@@ -869,8 +869,8 @@ button {
   background: linear-gradient(rgba(209, 92, 176, 0.8823529412), rgba(126, 73, 191, 0.8823529412));
   z-index: 200;
   position: fixed;
-  -webkit-animation: pageloader 4s ease-in-out 1 forwards;
-          animation: pageloader 4s ease-in-out 1 forwards;
+  -webkit-animation: pageloader 3s ease-in-out 1 forwards;
+          animation: pageloader 3s ease-in-out 1 forwards;
 }
 
 .loader {
@@ -890,20 +890,20 @@ button {
   color: #353535;
   -webkit-clip-path: circle(50% at 50% 50%);
           clip-path: circle(50% at 50% 50%);
-  -webkit-animation: loader 4s ease-in-out infinite alternate;
-          animation: loader 4s ease-in-out infinite alternate;
+  -webkit-animation: loader 3s ease-in-out infinite alternate;
+          animation: loader 3s ease-in-out infinite alternate;
 }
 .loader_1 {
-  -webkit-animation: color1 4s ease-in infinite alternate;
-          animation: color1 4s ease-in infinite alternate;
+  -webkit-animation: color1 3s ease-in infinite alternate;
+          animation: color1 3s ease-in infinite alternate;
 }
 .loader_2 {
-  -webkit-animation: color2 4s ease-in infinite alternate;
-          animation: color2 4s ease-in infinite alternate;
+  -webkit-animation: color2 3s ease-in infinite alternate;
+          animation: color2 3s ease-in infinite alternate;
 }
 .loader_3 {
-  -webkit-animation: color3 4s ease-in infinite alternate;
-          animation: color3 4s ease-in infinite alternate;
+  -webkit-animation: color3 3s ease-in infinite alternate;
+          animation: color3 3s ease-in infinite alternate;
 }
 
 /** Version desktop - Accueil */
@@ -959,6 +959,8 @@ button {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    position: relative;
+    left: -2vw;
   }
   .menu_header_text {
     font-family: "Shrikhand";
@@ -982,8 +984,9 @@ button {
     box-shadow: 3px 3px 10px 3px #d6d4d4;
     display: flex;
     flex-direction: row;
-    align-items: space-between;
+    align-items: center;
     justify-content: space-between;
+    align-items: stretch;
     background-color: #F6F6F6;
     border-radius: 20px;
     height: 70px;
@@ -1027,5 +1030,29 @@ button {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+  }
+}
+/** version tablette - variations des positions des coeurs + taille des cohches */
+@media (min-width: 768px) and (max-width: 1399px) {
+  .restaurants_carte_fav {
+    position: relative;
+    right: 6vw;
+  }
+  .menu_header_fav {
+    position: relative;
+    right: -10vw;
+  }
+  .coche {
+    max-width: 10%;
+  }
+  .photo {
+    width: 100%;
+  }
+  .photo img {
+    -o-object-fit: fill;
+       object-fit: fill;
+    -o-object-position: 0px 0px;
+       object-position: 0px 0px;
+    height: 40vh;
   }
 }/*# sourceMappingURL=main.css.map */
